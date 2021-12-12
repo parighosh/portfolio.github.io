@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: rgba(247,174,185,255);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body style="background-color:rgba(255,253,228,255);">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#" class="w3-bar-item w3-button w3-pink  w3-padding-large")>
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-pink">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-pink">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>MENU</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-pink">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w-pink w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">MENU</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+<header class="w3-container w3-padding-32 w3-center" style="color:rgba(109,57,46,255)" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Baked By Pari</h1>
+    <video width="850" height="1100" autoplay muted>
+        <source src="newVideo.mp4" type="video/mp4">
+        <source src="/cakeVideo.ogg" type="video/ogg">
+    </video>
+   
+  </header>
+  
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="about">
+    <h2 style="color:rgba(109,57,46,255)">About Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p style="color:rgba(109,57,46,255)">Hello my name is Pari. I am a student at Georgia Tech. My deep-rooted passion for baking and decorating cakes has led to me start my very first business! I appreciate your love and support as well as feedback. Let me know how I can be of assistance to you in any way.</p>
+</div>
+
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 style="color:rgba(109,57,46,255)">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+<!-- Slideshow container -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 7</div>
+        <img src="slideshow1.jpg" style="width:100%">
+        <div class="text">Pinapple Cake</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 7</div>
+        <img src="slideshow2.jpg" style="width:100%">
+        <div class="text">Black Forest Cake</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 7</div>
+        <img src="slideshow3.jpg" style="width:100%">
+        <div class="text">Biscoff Cake</div>
+      </div>
+     
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 7</div>
+          <img src="slideshow4.jpg" style="width:100%">
+          <div class="text">Biscoff Engagment Cake</div>
+      </div>
+  
+      <div class="mySlides fade">
+          <div class="numbertext">5 / 7</div>
+          <img src="slideshow5.jpg" style="width:100%">
+          <div class="text">Ferrero Rocher Cake</div>
+      </div>
+  
+      <div class="mySlides fade">
+          <div class="numbertext">6 / 7</div>
+          <img src="slideshow6.jpg" style="width:100%">
+          <div class="text">Biscoff Custom Cake</div>
+        </div>
+  
+      <div class="mySlides fade">
+          <div class="numbertext">7 / 7</div>
+          <img src="slideshow7.jpg" style="width:100%">
+          <div class="text">Chocolate Custom Cake</div>
+      </div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  <!-- Menu Container -->
+<div class="w3-container w3-padding-64 w3-large" id="menu">
+    <div class="w3-content" style="background-color:rgb(255, 192, 203)">
+    
+      <h1 class="w3-center w3-jumbo" style="margin: bottom 30px">The Menu</h1>
+      <div class="w3-row w3-center w3-border w3-border-dark-grey">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Specialty Flavors');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-pink">Specialty Flavors</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Build a Custom Cake');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-pink">Build a Custom Cake</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Chocolate Assortments');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-pink">Chocolate Assortments</div>
+        </a>
+      </div>
+  
+      <div id="Specialty Flavors" class="w3-container menu w3-padding-32 w3-white">
+        <h1><b>Black Forest</b> <span class="w3-right w3-tag w3-round" style="background-color:rgb(255, 192, 203)">Popular</span></h1>
+        <p class="w3-text-grey">Layers of Chocolate sponge cake filled with marschino cherries and iced with whipped cream.</p>
+        <hr>
+     
+        <h1><b>Pineapple</b> </span><span class="w3-right w3-tag w3-round"style="background-color:rgb(255, 192, 203)">Popular</span></h1>
+        <p class="w3-text-grey">Layers of Vanilla sponge cake filled with pineapples and iced with whipped cream.</p>
+        <hr>
+        
+        <h1><b>Rose w Gulab Jamun</b></span></h1>
+        <p class="w3-text-grey">Rose flavored cake filled Gulab Jamun (An indian dessert of fried dough balls soaked in sugar syrup) iced with Cream Cheese icing to tame the sweetness.  </p>
+        <hr>
+  
+        <h1><b>Strawberry</b></h1>
+        <p class="w3-text-grey">Vanilla cake soaked in fresh strawberry puree iced with fresh strawberry buttercream icing.</p>
+        <hr>
+  
+        <h1><b>Red Velvet</b> <span class="w3-right w3-tag w3-round"style="background-color:rgb(255, 192, 203)">Popular</h1>
+        <p class="w3-text-grey">Scarlet-colored chocolate cake iced with Cream Cheese icing.</p>
+        <hr>
+
+        <h1><b>Reeses Cake</b></h1>
+        <p class="w3-text-grey">Chocolate reeses sponge cake iced with peanut butter butercream icing.  </p>
+        <hr>
+  
+        <h1><b>Biscoff</b> <span class="w3-right w3-tag w3-round"style="background-color:rgb(255, 192, 203)">Popular</span></h1>
+        <p class="w3-text-grey">Vanilla cake filled with Biscoff cookies and iced with Biscoff butercream icing.</p>
+      </div>
+
+      <div id="Build a Custom Cake" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Pick a Cake Flavor</b></h1>
+        <p class="w3-text-grey">Chocolate, Vanilla, Rose, Strawberry</p>
+        <hr>
+
+        <h1><b>Filling</b></h1>
+        <p class="w3-text-grey">Strawberry, Chocolate ganache 
+        <br>(Contact me for custom topping)</br></p>
+        <hr>
+
+        <h1><b>Icing</b></h1>
+        <p class="w3-text-grey"><br>Buttercream (Chocolate, Vanilla, Strawberry, Biscoff, Coconut)</br>
+            <br>Cream Cheese (Chocolate, Vanilla, Rose, Coconut)</br>
+            <br>Whipped Cream (Chocolate, Vanilla, Rose, Pinapple, Coconut)</br></p>   
+      </div>
+  
+  
+      <div id="Chocolate Assortments" class="w3-container menu w3-padding-32 w3-white">
+        <h1><b>Chocolate Covered Strawberries</b></h1>
+        <p class="w3-text-grey">Fresh Strawberries dipped in Ghiredelli Chocolate</p>
+        <hr>
+     
+        <h1><b>Cake Pops</b></h1>
+        <p class="w3-text-grey">Cake mixed with buttercream icing formed into a cake styled lollipop.</p>
+        <hr>
+        
+        <h1><b>Breakable Chocolate Heart</b></h1>
+        <p class="w3-text-grey">Edible chocolate pinatas filled with candy and sprinkles.</p>
+        <hr>
+        
+        <h1><b>Mixed Assortment</b></h1>
+        <p class="w3-text-grey">Breakable chocolate heart cake pops, and chocolate covered strawberries. </p>
+      </div><br>
+  
+    </div>
+  </div>
+  <script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-pink", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-pink";
+  }
+  document.getElementById("myLink").click();
+  </script>
+  
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 style="color:rgba(109,57,46,255)">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i style="color:rgba(109,57,46,255)"class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Atlanta, Georgia</p>
+      <p><i style="color:rgba(109,57,46,255)"class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +1(404)-387-2478</p>
+      <p><i style="color:rgba(109,57,46,255)"class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: ghosh.pari082@gmail.com</p>
+    </div><br>
+    <p>Order a Cake Online:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="First & Last Name" required name="First & Last Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Pickup Date" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Cake Size" required name="Cake Size"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Cake Flavor" required name="Cake Flavor"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Extra Details(Custom Order Requests)" required name="Extra Details(Custom Order Requests)"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-instagram w3-hover-opacity"></i>  
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+   
+
+</body>
+</html>
